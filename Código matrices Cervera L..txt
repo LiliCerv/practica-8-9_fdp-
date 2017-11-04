@@ -1,0 +1,637 @@
+// Primera Parte llenar matrices 
+#include<stdio.h>
+
+int main(){
+	int matriz1,matriz2,r1,columnas,c1,conta_columna=0,conta_renglon=0,conta_rm2=0,conta_cm2=0,r2,c2;
+	printf("Dame el numero de renglones de la primera matriz:\n");
+	scanf("%d",&r1);
+	printf("Dame el numero de columnas de la primera matriz:\n");
+	scanf("%d",&c1);
+	fflush(stdin);
+		while(conta_renglon<r1){
+			
+			while (conta_columna<c1){
+		
+			printf("Matriz 1 Dame valor del renglon %d y de la columna %d:\n",conta_renglon,conta_columna);
+			scanf("r%d %d: &matriz1[conta_renglon][conta_columna]");
+			fflush(stdin);
+			conta_columna=conta_columna+1;
+			
+			}
+		conta_renglon=conta_renglon+1;
+		
+		}
+
+		
+}
+/*compilaba pero al momento de pedir los valores de la matriz 1 solo pedia los valores del primer renglon y todas sus columnas y paraba por lo
+que se le indico que el conta_columna retomara el valor de cero cuando a conta_renglo se le aumentara uno 
+*/ 
+#include<stdio.h>
+
+int main(){
+	int matriz1,matriz2,r1,columnas,c1,conta_columna=0,conta_renglon=0,conta_rm2=0,conta_cm2=0,r2,c2;
+	printf("Dame el numero de renglones de la primera matriz:\n");
+	scanf("%d",&r1);
+	printf("Dame el numero de columnas de la primera matriz:\n");
+	scanf("%d",&c1);
+	fflush(stdin);
+		while(conta_renglon<r1){
+			
+			while (conta_columna<c1){
+		
+			printf("Matriz 1 Dame valor del renglon %d y de la columna %d:\n",conta_renglon,conta_columna);
+			scanf("r%d %d: &matriz1[conta_renglon][conta_columna]");
+			fflush(stdin);
+			conta_columna=conta_columna+1;
+			
+			}
+		conta_renglon=conta_renglon+1;
+		conta_columna=0;
+		
+		}
+
+}
+
+//compilo y ya pide todos lo valores de la matriz 1 se prosigue a llenar la matriz 2 copiando la misma funcion pero cambiando las variables 
+
+#include<stdio.h>
+
+int main(){
+	int matriz1,matriz2,r1,columnas,c1,conta_columna=0,conta_renglon=0,conta_rm2=0,conta_cm2=0,r2,c2;
+	printf("Dame el numero de renglones de la primera matriz:\n");
+	scanf("%d",&r1);
+	printf("Dame el numero de columnas de la primera matriz:\n");
+	scanf("%d",&c1);
+	fflush(stdin);
+		while(conta_renglon<r1){
+			
+			while (conta_columna<c1){
+		
+			printf("Matriz 1 Dame valor del renglon %d y de la columna %d:\n",conta_renglon,conta_columna);
+			scanf("r%d %d: &matriz1[conta_renglon][conta_columna]");
+			fflush(stdin);
+			conta_columna=conta_columna+1;
+			
+			}
+		conta_renglon=conta_renglon+1;
+		conta_columna=0;
+		
+		}
+
+	printf("Dame el numero de renglones de la segunda matriz:\n");
+	scanf("%d",&r2);
+	printf("Dame el numero de columnas de la segunda matriz:\n");
+	scanf("%d",&c2);
+	fflush(stdin);
+	while(conta_rm2<r2){
+			
+			while (conta_cm2<c2){
+		
+			p("Matriz 2 Dame valor del renglon %d y de la columna %d:\n",conta_rm2,conta_cm2);
+			s("r%d %d: &matriz2[conta_rm2][conta_cm2]");
+			fflush(stdin);
+			conta_cm2=conta_cm2+1;
+			
+			}
+		conta_rm2=conta_rm2+1;
+		conta_cm2=0;
+		
+		}
+		
+}
+
+//ya funciona perfectamente en el copilador de c++ pero al tratar de compilaro en Linux maraba error en el scanf de los whiles asi que se cambio
+ y además se considero que si el usuario daba algun valor cero o negativo se tenía que indicar que era un valor no valido 
+
+#include<stdio.h>
+
+int main(){
+        int matriz1[100][100],matriz2[100][100],matriz_r[100][100],conta_r=0,resu;
+		int r1,columnas,c1,conta_columna=0,conta_renglon=0,conta_rm2=0,conta_cm2=0,r2,c2;
+        printf("Dame el numero de renglones de la primera matriz:\n");
+        scanf("%d",&r1);
+        printf("Dame el numero de columnas de la primera matriz:\n");
+        scanf("%d",&c1);
+        printf("Dame el numero de renglones de la segunda matriz:\n");
+        scanf("%d",&r2);
+        printf("Dame el numero de columnas de la segunda matriz:\n");
+        scanf("%d",&c2);
+        fflush(stdin);
+        	if(r1<=0)
+        		printf("Error valor de renglones matriz 1 no valido\n");
+        	else {
+                if(r2<=0)
+                	printf("Error valor de columnas matriz 1 no valido\n");
+                else {
+                    if(c1<=0)
+                        printf("Error valor de reglones matriz 2 no valido\n");
+                    else {
+                        if(c2<=0)
+                            printf("Error valor de columnas matriz 2 no valido\n");
+                        else{
+                            if(c1!=r2)
+                                printf("La multiplicaciÃ³e matrices no se puede efectuar");
+                            else{
+                                printf("Valores Matriz 1\n");
+                                fflush(stdin);
+                                    while(conta_renglon<r1){
+					while (conta_columna<c1){
+					   printf("Matriz 1 Dame valor del renglon %d y de la columna %d:\n",conta_renglon,conta_columna);
+                                            scanf("%d",&matriz1[conta_renglon][conta_columna]);
+                                            fflush(stdin);
+     					    conta_columna=conta_columna+1;
+					    }
+				     conta_renglon=conta_renglon+1;
+                                     conta_columna=0;
+				     }
+
+                                printf("Valores Matriz 2\n");
+                                fflush(stdin);
+                                    while(conta_rm2<r2){
+                                        while (conta_cm2<c2){
+                                            p("Matriz 2 Dame valor del renglon %d y de la columna %d:\n",conta_rm2,conta_cm2);
+                                            s("%d",&matriz2[conta_rm2][conta_cm2]);
+                                            fflush(stdin);
+                                            conta_cm2=conta_cm2+1;
+                                        }
+                                        conta_rm2=conta_rm2+1;
+                                        conta_cm2=0;
+									}
+                            }
+			}
+                    }
+                }
+            }
+          }
+// se probo quitar los corchetes de los else para evitar tener tantantas lineas 
+
+#include<stdio.h>
+int main(){
+        int matriz1[100][100],matriz2[100][100],matriz_r[100][100],conta_r=0;
+		int r1,columnas,c1,conta_columna=0,conta_renglon=0,conta_rm2=0,conta_cm2=0,r2,c2;
+        printf("Dame el numero de renglones de la primera matriz:\n");
+        scanf("%d",&r1);
+        printf("Dame el numero de columnas de la primera matriz:\n");
+        scanf("%d",&c1);
+        printf("Dame el numero de renglones de la segunda matriz:\n");
+        scanf("%d",&r2);
+        printf("Dame el numero de columnas de la segunda matriz:\n");
+        scanf("%d",&c2);
+        fflush(stdin);
+        	if(r1<=0)
+        		printf("Error valor de renglones matriz 1 no valido\n");
+        	else
+                if(r2<=0)
+                	printf("Error valor de columnas matriz 1 no valido\n");
+                else 
+                    if(c1<=0)
+                        printf("Error valor de reglones matriz 2 no valido\n");
+                    else 
+                        if(c2<=0)
+                            printf("Error valor de columnas matriz 2 no valido\n");
+                        else
+                            if(c1!=r2)
+                                printf("La multiplicacion de matrices no se puede efectuar");
+                            else
+                                printf("Valores Matriz 1\n");
+                                fflush(stdin);
+                                    while(conta_renglon<r1){
+										while (conta_columna<c1){
+											printf("Matriz 1 Dame valor del renglon %d y de la columna %d:\n",conta_renglon,conta_columna);
+                                            scanf("%d",&matriz1[conta_renglon][conta_columna]);
+                                            fflush(stdin);
+     										conta_columna=conta_columna+1;
+											 }
+										conta_renglon=conta_renglon+1;
+                                        conta_columna=0;
+										}
+
+                                printf("Valores Matriz 2\n");
+                                fflush(stdin);
+                                    while(conta_rm2<r2){
+                                        while (conta_cm2<c2){
+                                            printf("Matriz 2 Dame valor del renglon %d y de la columna %d:\n",conta_rm2,conta_cm2);
+                                            scanf("%d",&matriz2[conta_rm2][conta_cm2]);
+                                            fflush(stdin);
+                                            conta_cm2=conta_cm2+1;
+                                        }
+                                     conta_rm2=conta_rm2+1;
+                                     conta_cm2=0;
+				     }
+}
+//Segunda Parte Impresión Matriz 1 y Matriz 2 
+// si compilo sin corchetes se procede a la impresión para la cual se repite la funcion para llenar pero solo con el printf 
+
+#include<stdio.h>
+int main(){
+        int matriz1[100][100],matriz2[100][100],matriz_r[100][100],conta_r=0;
+	int r1,columnas,c1,conta_columna=0,conta_renglon=0,conta_rm2=0,conta_cm2=0,r2,c2;
+        printf("Dame el numero de renglones de la primera matriz:\n");
+        scanf("%d",&r1);
+        printf("Dame el numero de columnas de la primera matriz:\n");
+        scanf("%d",&c1);
+        printf("Dame el numero de renglones de la segunda matriz:\n");
+        scanf("%d",&r2);
+        printf("Dame el numero de columnas de la segunda matriz:\n");
+        scanf("%d",&c2);
+        fflush(stdin);
+        	if(r1<=0)
+        		printf("Error valor de renglones matriz 1 no valido\n");
+        	else
+                if(r2<=0)
+                	printf("Error valor de columnas matriz 1 no valido\n");
+                else 
+                    if(c1<=0)
+                        printf("Error valor de reglones matriz 2 no valido\n");
+                    else 
+                        if(c2<=0)
+                            printf("Error valor de columnas matriz 2 no valido\n");
+                        else
+                            if(c1!=r2)
+                                printf("La multiplicacion de matrices no se puede efectuar");
+                            else
+                                printf("Valores Matriz 1\n");
+                                fflush(stdin);
+                                    while(conta_renglon<r1){
+					while (conta_columna<c1){
+					printf("Matriz 1 Dame valor del renglon %d y de la columna %d:\n",conta_renglon,conta_columna);
+                                        scanf("%d",&matriz1[conta_renglon][conta_columna]);
+                                        fflush(stdin);
+     				        conta_columna=conta_columna+1;
+				        }
+				     conta_renglon=conta_renglon+1;
+                                     conta_columna=0;
+				     }
+
+                                printf("Valores Matriz 2\n");
+                                fflush(stdin);
+                                    while(conta_rm2<r2){
+                                        while (conta_cm2<c2){
+                                            printf("Matriz 2 Dame valor del renglon %d y de la columna %d:\n",conta_rm2,conta_cm2);
+                                            scanf("%d",&matriz2[conta_rm2][conta_cm2]);
+                                            fflush(stdin);
+                                            conta_cm2=conta_cm2+1;
+                                             }
+                                        conta_rm2=conta_rm2+1;
+                                        conta_cm2=0;
+					}
+					
+                                printf("Estos son los valores que diste de la matriz 1\n");
+            			conta_renglon =0;
+            			conta_columna=0;
+                		while(conta_renglon<r1){
+                                       while (conta_columna<c1){
+                                         printf("%d\t",matriz1[conta_renglon][conta_columna]);
+                                         conta_columna=conta_columna+1;
+					 }
+				   printf("\n");		
+                                   conta_renglon=conta_renglon+1;
+                                   conta_columna=0;
+                                    }
+                                 printf("\n");
+		                 printf("Estos son los valores que diste de la matriz 2\n");
+                                 conta_rm2=0;
+                                 conta_cm2=0;
+                                 while(conta_rm2<r2){
+				    while (conta_cm2<c2){
+				       printf("%d\t",matriz2[conta_rm2][conta_cm2]);
+                                       conta_cm2=conta_cm2+1;
+				       }
+				 printf("\n");		
+                                 conta_rm2=conta_rm2+1;
+                                 conta_cm2=0;
+				 }
+}
+
+//Tercera parte Producto de Matrices 
+//se procede con el producto 
+
+#include<stdio.h>
+#define p printf
+#define s scanf
+int main(){
+        int matriz1[100][100],matriz2[100][100],matriz_r[100][100],conta_r=0,resu;
+		int r1,columnas,c1,conta_columna=0,conta_renglon=0,conta_rm2=0,conta_cm2=0,r2,c2;
+        printf("Dame el numero de renglones de la primera matriz:\n");
+        scanf("%d",&r1);
+        printf("Dame el numero de columnas de la primera matriz:\n");
+        scanf("%d",&c1);
+        printf("Dame el numero de renglones de la segunda matriz:\n");
+        scanf("%d",&r2);
+        printf("Dame el numero de columnas de la segunda matriz:\n");
+        scanf("%d",&c2);
+        fflush(stdin);
+        	if(r1<=0)
+        		printf("Error valor de renglones matriz 1 no valido\n");
+        	else 
+                if(r2<=0)
+                	printf("Error valor de columnas matriz 1 no valido\n");
+                else 
+                    if(c1<=0)
+                        printf("Error valor de reglones matriz 2 no valido\n");
+                    else 
+                        if(c2<=0)
+                            printf("Error valor de columnas matriz 2 no valido\n");
+                        else
+                            if(c1!=r2)
+                                printf("La multiplicaciÃ³e matrices no se puede efectuar");
+                            else
+                                printf("Valores Matriz 1\n");
+                                fflush(stdin);
+                                    while(conta_renglon<r1){
+					while (conta_columna<c1){
+					  printf("Matriz 1 Dame valor del renglon %d y de la columna %d:\n",conta_renglon,conta_columna);
+                                          scanf("%d",&matriz1[conta_renglon][conta_columna]);
+                                          fflush(stdin);
+     					  conta_columna=conta_columna+1;
+					  }
+				     conta_renglon=conta_renglon+1;
+                                     conta_columna=0;
+				     }
+
+                                printf("Valores Matriz 2\n");
+                                fflush(stdin);
+                                    while(conta_rm2<r2){
+                                        while (conta_cm2<c2){
+                                            printf("Matriz 2 Dame valor del renglon %d y de la columna %d:\n",conta_rm2,conta_cm2);
+                                            scanf("%d",&matriz2[conta_rm2][conta_cm2]);
+                                            fflush(stdin);
+                                            conta_cm2=conta_cm2+1;
+                                             }
+                                        conta_rm2=conta_rm2+1;
+                                        conta_cm2=0;
+					}
+                 
+            printf("Estos son lo valores que diste de la matriz 1\n");
+            conta_renglon =0;
+            conta_columna=0;
+                while(conta_renglon<r1){
+                    while (conta_columna<c1){
+
+                    	printf("%d\t",matriz1[conta_renglon][conta_columna]);
+                        conta_columna=conta_columna+1;
+			}
+		    printf("\n");		
+                    conta_renglon=conta_renglon+1;
+                    conta_columna=0;
+                    }
+                
+	    printf("\n");
+	    printf("Estos son lo valores que diste de la matriz 2\n");
+            conta_rm2=0;
+            conta_cm2=0;
+                while(conta_rm2<r2){
+		    while (conta_cm2<c2){
+			printf("%d\t",matriz2[conta_rm2][conta_cm2]);
+                        conta_cm2=conta_cm2+1;
+			}
+		    printf("\n");		
+                    conta_rm2=conta_rm2+1;
+                    conta_cm2=0;
+		    }
+				
+            while(conta_renglon<r1){
+
+              while (conta_cm2<c2){
+		  matriz_r[conta_renglon][conta_cm2]=0;
+     		  conta_cm2=conta_cm2+1;
+		  }		
+              conta_renglon=conta_renglon+1;
+              conta_cm2=0;
+	      }
+	   conta_renglon=0;
+           conta_cm2=0;
+            		
+	   while(conta_renglon<r1){
+	      while (conta_cm2<c2){
+		 while (conta_renglon<r1){
+		    matriz_r[conta_renglon][conta_cm2]=matriz1[conta_renglon][conta_columna]*matriz2[conta_rm2][conta_cm2]+matriz_r[conta_renglon][conta_cm2];
+		    conta_renglon=conta_renglon+1;
+                    conta_cm2=conta_cm2+1;
+                    }
+     		conta_cm2=conta_cm2+1;
+     		conta_renglon=0;
+		}	
+            conta_renglon=conta_renglon+1;
+            conta_cm2=0;
+            }
+                    	
+}
+/* si compilo y realizo todas las operaciones exitosamente menos el producto asi que cambien los ciclos whiles porque me di cuenta que no eran necesarios 5 sino solo 3 
+al igual que como conta_renglon tiene el mismo valor entonces podían tener un mismo contador el que llame conta_r
+*/ 
+
+#include<stdio.h>
+int main(){
+        int matriz1[100][100],matriz2[100][100],matriz_r[100][100],conta_r=0;
+		int r1,columnas,c1,conta_columna=0,conta_renglon=0,conta_rm2=0,conta_cm2=0,r2,c2;
+        printf("Dame el numero de renglones de la primera matriz:\n");
+        scanf("%d",&r1);
+        printf("Dame el numero de columnas de la primera matriz:\n");
+        scanf("%d",&c1);
+        printf("Dame el numero de renglones de la segunda matriz:\n");
+        scanf("%d",&r2);
+        printf("Dame el numero de columnas de la segunda matriz:\n");
+        scanf("%d",&c2);
+        fflush(stdin);
+        	if(r1<=0)
+        		printf("Error valor de renglones matriz 1 no valido\n");
+        	else
+                if(r2<=0)
+                	printf("Error valor de columnas matriz 1 no valido\n");
+                else 
+                    if(c1<=0)
+                        printf("Error valor de reglones matriz 2 no valido\n");
+                    else 
+                        if(c2<=0)
+                            printf("Error valor de columnas matriz 2 no valido\n");
+                        else
+                            if(c1!=r2)
+                                printf("La multiplicacion de matrices no se puede efectuar");
+                            else
+                                printf("Valores Matriz 1\n");
+                                fflush(stdin);
+                                    while(conta_renglon<r1){
+					 while (conta_columna<c1){
+					    printf("Matriz 1 Dame valor del renglon %d y de la columna %d:\n",conta_renglon,conta_columna);
+                                            scanf("%d",&matriz1[conta_renglon][conta_columna]);
+                                            fflush(stdin);
+     					    conta_columna=conta_columna+1;
+					     }
+					conta_renglon=conta_renglon+1;
+                                        conta_columna=0;
+					}
+
+                                printf("Valores Matriz 2\n");
+                                fflush(stdin);
+                                    while(conta_rm2<r2){
+                                        while (conta_cm2<c2){
+                                            printf("Matriz 2 Dame valor del renglon %d y de la columna %d:\n",conta_rm2,conta_cm2);
+                                            scanf("%d",&matriz2[conta_rm2][conta_cm2]);
+                                            fflush(stdin);
+                                            conta_cm2=conta_cm2+1;
+                                             }
+                                        conta_rm2=conta_rm2+1;
+                                        conta_cm2=0;
+					}
+				printf("Estos son los valores que diste de la matriz 1\n");
+            			conta_renglon =0;
+            			conta_columna=0;
+                		while(conta_renglon<r1){
+                                     while (conta_columna<c1){
+                                         printf("%d\t",matriz1[conta_renglon][conta_columna]);
+                                         conta_columna=conta_columna+1;
+					 }
+				   printf("\n");		
+                                   conta_renglon=conta_renglon+1;
+                                   conta_columna=0;}
+                
+			        printf("\n");
+		                printf("Estos son los valores que diste de la matriz 2\n");
+                                conta_rm2=0;
+                                conta_cm2=0;
+                                while(conta_rm2<r2){
+				    while (conta_cm2<c2){
+				       printf("%d\t",matriz2[conta_rm2][conta_cm2]);
+                                       conta_cm2=conta_cm2+1;
+				       }
+			         printf("\n");		
+                                 conta_rm2=conta_rm2+1;
+                                 conta_cm2=0;
+				 }
+				
+				 matriz_r[conta_renglon][conta_cm2]=0;
+		                 conta_renglon=0;
+                                 conta_cm2=0;	
+			              while(conta_renglon<r1){
+			                   while (conta_cm2<c2){
+				                while (conta_r<c1){
+					            matriz_r[conta_renglon][conta_cm2]=matriz1[conta_renglon][conta_r]*matriz2[conta_r][conta_cm2]+matriz_r[conta_renglon][conta_cm2];
+					            conta_r=conta_r+1;
+                                                     }
+     			                   conta_cm2=conta_cm2+1;
+     			                   conta_r=0;
+			                   }	
+                                       conta_renglon=conta_renglon+1;
+                                       conta_cm2=0;
+				       }
+    }
+//Cuarta parte Imprimir Matriz 3 
+//ya compilo y realizo todas las operaciones exitosamente asi que como extra se imprime la matriz resultante 
+
+
+#include<stdio.h>
+int main(){
+        int matriz1[100][100],matriz2[100][100],matriz_r[100][100],conta_r=0;
+		int r1,columnas,c1,conta_columna=0,conta_renglon=0,conta_rm2=0,conta_cm2=0,r2,c2;
+        printf("Dame el numero de renglones de la primera matriz:\n");
+        scanf("%d",&r1);
+        printf("Dame el numero de columnas de la primera matriz:\n");
+        scanf("%d",&c1);
+        printf("Dame el numero de renglones de la segunda matriz:\n");
+        scanf("%d",&r2);
+        printf("Dame el numero de columnas de la segunda matriz:\n");
+        scanf("%d",&c2);
+        fflush(stdin);
+        	if(r1<=0)
+        		printf("Error valor de renglones matriz 1 no valido\n");
+        	else
+                if(r2<=0)
+                	printf("Error valor de columnas matriz 1 no valido\n");
+                else 
+                    if(c1<=0)
+                        printf("Error valor de reglones matriz 2 no valido\n");
+                    else 
+                        if(c2<=0)
+                            printf("Error valor de columnas matriz 2 no valido\n");
+                        else
+                            if(c1!=r2)
+                                printf("La multiplicacion de matrices no se puede efectuar");
+                            else
+                                printf("Valores Matriz 1\n");
+                                fflush(stdin);
+                                    while(conta_renglon<r1){
+					 while (conta_columna<c1){
+					    printf("Matriz 1 Dame valor del renglon %d y de la columna %d:\n",conta_renglon,conta_columna);
+                                            scanf("%d",&matriz1[conta_renglon][conta_columna]);
+                                            fflush(stdin);
+     					    conta_columna=conta_columna+1;
+					     }
+					conta_renglon=conta_renglon+1;
+                                        conta_columna=0;
+					}
+
+                                printf("Valores Matriz 2\n");
+                                fflush(stdin);
+                                    while(conta_rm2<r2){
+                                        while (conta_cm2<c2){
+                                            printf("Matriz 2 Dame valor del renglon %d y de la columna %d:\n",conta_rm2,conta_cm2);
+                                            scanf("%d",&matriz2[conta_rm2][conta_cm2]);
+                                            fflush(stdin);
+                                            conta_cm2=conta_cm2+1;
+                                             }
+                                        conta_rm2=conta_rm2+1;
+                                        conta_cm2=0;
+					}
+				printf("Estos son los valores que diste de la matriz 1\n");
+            			conta_renglon =0;
+            			conta_columna=0;
+                		while(conta_renglon<r1){
+                                     while (conta_columna<c1){
+                                         printf("%d\t",matriz1[conta_renglon][conta_columna]);
+                                         conta_columna=conta_columna+1;
+					 }
+				   printf("\n");		
+                                   conta_renglon=conta_renglon+1;
+                                   conta_columna=0;}
+                
+			        printf("\n");
+		                printf("Estos son los valores que diste de la matriz 2\n");
+                                conta_rm2=0;
+                                conta_cm2=0;
+                                while(conta_rm2<r2){
+				    while (conta_cm2<c2){
+				       printf("%d\t",matriz2[conta_rm2][conta_cm2]);
+                                       conta_cm2=conta_cm2+1;
+				       }
+			         printf("\n");		
+                                 conta_rm2=conta_rm2+1;
+                                 conta_cm2=0;
+				 }
+				
+				 matriz_r[conta_renglon][conta_cm2]=0;
+		                 conta_renglon=0;
+                                 conta_cm2=0;	
+			              while(conta_renglon<r1){
+			                   while (conta_cm2<c2){
+				                while (conta_r<c1){
+					            matriz_r[conta_renglon][conta_cm2]=matriz1[conta_renglon][conta_r]*matriz2[conta_r][conta_cm2]+matriz_r[conta_renglon][conta_cm2];
+					            conta_r=conta_r+1;
+                                                     }
+     			                   conta_cm2=conta_cm2+1;
+     			                   conta_r=0;
+			                   }	
+                                       conta_renglon=conta_renglon+1;
+                                       conta_cm2=0;
+				       }
+
+                              printf("\nLa multiplicacion de tus dos matrices es \n");
+                              conta_renglon=0;
+                              conta_cm2=0;
+                              while(conta_renglon<r1){
+                	            while (conta_cm2<c2){
+				       printf("%d\t",matriz_r[conta_renglon][conta_cm2]);
+                                       conta_cm2=conta_cm2+1;
+				        }
+			       printf("\n");		
+                               conta_renglon=conta_renglon+1;
+                               conta_cm2=0;
+			       } 
+}
+
+
+
+
+		
+             
